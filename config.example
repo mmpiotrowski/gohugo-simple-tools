@@ -1,0 +1,5 @@
+THEME_REPO="https://github.com/luizdepra/hugo-coder.git"
+THEME_VERSION="v1.1"
+HUGO_IMAGE="klakegg/hugo:0.101.0-ext"
+S3_BUCKET="YOUR_S3_BUCKET"
+CLOUDFRONT_DISITRIBUTION_ID="YOUR_CLOUDFRONT_ID"
