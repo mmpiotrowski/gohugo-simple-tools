@@ -11,8 +11,8 @@ Simple scirpts for:
 
 Copy config.example to config
 
- `THEME_REPO` - git repository with hugo theme
- `THEME_VERSION` - version of theme should be tag or branch
- `HUGO_IMAGE` - "klakegg/hugo:0.101.0-ext" [images in dockher hub](https://hub.docker.com/r/klakegg/hugo/)
- `S3_BUCKET` -  for deploymnet name of AWS S3 bucket
- `CLOUDFRONT_DISITRIBUTION_ID` - for deployment id of cloudfront
+ -`THEME_REPO` - git repository with hugo theme 
+ -`THEME_VERSION` - version of theme should be tag or branch 
+ -`HUGO_IMAGE` - "klakegg/hugo:0.101.0-ext" [images in dockher hub](https://hub.docker.com/r/klakegg/hugo/) 
+ -`S3_BUCKET` -  for deploymnet name of AWS S3 bucket 
+ -`CLOUDFRONT_DISITRIBUTION_ID` - for deployment id of cloudfront 
