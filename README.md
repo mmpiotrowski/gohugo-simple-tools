@@ -1,4 +1,6 @@
-# Tools for (Hugo)[https://gohugo.io/]  
+# Tools for Hugo
+
+(Hugo Website)[https://gohugo.io/]  
 
 Simple scirpts for:
   
@@ -16,4 +18,3 @@ Copy config.example to config
  `HUGO_IMAGE` - "klakegg/hugo:0.101.0-ext" (images in dockher hub)[https://hub.docker.com/r/klakegg/hugo/]  
  `S3_BUCKET` -  for deploymnet name of AWS S3 bucket
  `CLOUDFRONT_DISITRIBUTION_ID` - for deployment id of cloudfront
- 
