@@ -8,12 +8,14 @@ cd "$(dirname "${0}")"
 
 . config
 
+HUGO_PARAMS=$(./get-hugo-params.sh)
+
 cd "../"
 
 rm -rf ./development
 
 docker run --rm -it \
-   -v $(pwd):/src \
+   -v $(pwd):/src  $HUGO_PARAMS \
    -p ${PORT}:${PORT} \
    -u $(id -u):$(id -g) \
    "${HUGO_IMAGE}" \

@@ -10,7 +10,7 @@ cd "$(dirname "${0}")"
 
 cd "../"
 
-aws s3 sync ./public "s3://${S3_BUCKET}/"
+aws s3 sync --delete ./production "s3://${S3_BUCKET}/"
 # TODO cloundfornt optional ?
 aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_DISITRIBUTION_ID}" --paths "/*"
 #TODO cleaon old js files?
