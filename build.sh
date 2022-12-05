@@ -20,4 +20,7 @@ docker run --rm -it \
    -p 1313:1313 \
    -u $(id -u):$(id -g) \
    "${HUGO_IMAGE}" \
-   -d production
+   --environment production \
+   --destination production \
+   --cleanDestinationDir
+   
