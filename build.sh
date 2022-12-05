@@ -12,8 +12,6 @@ HUGO_PARAMS=$(./get-hugo-params.sh)
 
 cd "../"
 
-rm -rf ./production
-
 docker run --rm -it \
    -v $(pwd):/src $HUGO_PARAMS \
    --network host \
@@ -23,4 +21,3 @@ docker run --rm -it \
    --environment production \
    --destination production \
    --cleanDestinationDir
-   

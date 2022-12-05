@@ -12,9 +12,9 @@ HUGO_PARAMS=$(./get-hugo-params.sh)
 
 cd "../"
 
-# rm -rf ./development
-
 IP=$(hostname -I | awk '{ print $1 }')
+
+xdg-open "http://$IP:$PORT"
 
 docker run --rm -it \
    -v $(pwd):/src  $HUGO_PARAMS \
