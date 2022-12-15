@@ -12,7 +12,7 @@ HUGO_PARAMS=$(./get-hugo-params.sh)
 
 cd "../"
 
-docker run --rm -it \
+docker run --rm \
    -v $(pwd):/src $HUGO_PARAMS \
    --network host \
    -p 1313:1313 \
