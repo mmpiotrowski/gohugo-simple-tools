@@ -8,7 +8,7 @@ repo_dir = subprocess.check_output(['git rev-parse --show-toplevel'],shell=True,
 
 # get latest version from tags
 version_from_tags = int(subprocess.check_output(
-    [f'git fetch -t && git tag -l | grep version | sort -r | head -n 1'],
+    [f'git fetch -t && git tag -l | grep version | sort -r -V| head -n 1'],
     shell=True
 ).decode('utf-8').strip("\n").split('_')[1])
 
