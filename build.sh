@@ -10,6 +10,8 @@ cd "$(dirname "${0}")"
 
 HUGO_PARAMS=$(./get-hugo-params.sh)
 
+echo $HUGO_PARAMS
+
 cd "../"
 
 docker run --rm \
