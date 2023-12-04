@@ -19,7 +19,7 @@ docker run --rm \
    -u $(id -u):$(id -g) \
    --entrypoint "/bin/bash" \
    "${HUGO_IMAGE}" \
-   -c "yarn install && ./node_modules/.bin/tailwindcss -i ./themes/tella/assets/css/main.css -o ./themes/tella/assets/css/style.css &&  hugo \
+   -c "yarn install && ./node_modules/.bin/tailwindcss -i ./themes/tella/assets/css/main.css -o ./themes/tella/assets/css/style.css &&  hugo --verbose \
    --environment production \
    --destination production\
    --cleanDestinationDir \
