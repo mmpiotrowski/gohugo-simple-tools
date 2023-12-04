@@ -17,6 +17,7 @@ docker run --rm \
    --network host \
    -p 1313:1313 \
    -u $(id -u):$(id -g) \
+   --entrypoint "/bin/bash" \
    "${HUGO_IMAGE}" \
    -c "yarn install && ./node_modules/.bin/tailwindcss -i ./themes/tella/assets/css/main.css -o ./themes/tella/assets/css/style.css &&  hugo \
    --environment production \
