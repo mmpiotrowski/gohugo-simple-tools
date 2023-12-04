@@ -20,14 +20,15 @@ docker run --rm -it \
    -v $(pwd):/src  $HUGO_PARAMS \
    -p ${PORT}:${PORT} \
    -u $(id -u):$(id -g) \
+   --entrypoint "/bin/bash" \
    "${HUGO_IMAGE}" \
-   server \
+   -c "yarn install && ./node_modules/.bin/tailwindcss -i ./themes/tella/assets/css/main.css -o ./themes/tella/assets/css/style.css &&  hugo server \
    --environment development \
-   --destination development\
+   --destination development \
    --port ${PORT} \
    --disableFastRender \
    --buildFuture \
    --buildDrafts \
    --baseURL http://$IP \
    --noBuildLock \
-   --cleanDestinationDir
+   --cleanDestinationDir"

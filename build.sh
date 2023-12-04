@@ -18,6 +18,9 @@ docker run --rm \
    -p 1313:1313 \
    -u $(id -u):$(id -g) \
    "${HUGO_IMAGE}" \
+   -c "yarn install && ./node_modules/.bin/tailwindcss -i ./themes/tella/assets/css/main.css -o ./themes/tella/assets/css/style.css &&  hugo \
    --environment production \
-   --destination production \
-   --cleanDestinationDir
+   --destination production\
+   --cleanDestinationDir \
+   --baseURL https://${DOMAIN_NAME}"
+   
